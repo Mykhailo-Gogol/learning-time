@@ -1,3 +1,4 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 1
 // const Hotel = function (name, stars, capacity) {
 //   this.name = name;
 //   this.stars = stars;
@@ -12,7 +13,7 @@
 // const motel = new Hotel("Sunlight Motel", 4, 300);
 // console.log(motel);
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 2
 // const Hotel = function (name, stars, capacity) {
 //   this.name = name;
 //   this.stars = stars;
@@ -42,7 +43,7 @@
 // hotel.removeGuests(50);
 // console.log(hotel);
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 3
 // const Manager = function (name = "manager", sales = 0) {
 //   this.name = name;
 //   this.sales = sales;
@@ -66,7 +67,7 @@
 // console.log(poly.sell("Mac Book")); // Manager Poly sold Microwave
 // console.log(poly.sales); // 12
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 4
 // const animal = { eats: true };
 // const dog = Object.create(animal);
 // dog.barks = true;
@@ -74,7 +75,7 @@
 // console.log(dog.barks); // true
 // console.log(dog.eats); // true
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 5
 // const animal = { eats: true };
 // const dog = Object.create(animal);
 // dog.barks = true;
@@ -83,7 +84,7 @@
 //   console.log(key); // barks, eats
 // }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 6
 // const animal = { eats: true };
 // const dog = Object.create(animal);
 // dog.barks = true;
@@ -105,49 +106,3 @@
 // for (const key in dog) {
 //   console.log(dog.hasOwnProperty(key)); // barks, eats
 // }
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// const Guest = function (name, room) {
-//   this.name = name;
-//   this.room = room;
-// };
-
-// Guest.prototype.showGuestInfo = function () {
-//   console.log(`name: ${this.name}, room: ${this.room}`);
-// };
-
-// Guest.prototype.sayHello = function () {
-//   console.log(`Hello, ${this.name}. Your order: room ${this.room}`);
-// };
-
-// const mango = new Guest("Mango", 28);
-// const poly = new Guest("Poly", 36);
-
-// mango.showGuestInfo(); // name: Mango, room: 28
-// poly.showGuestInfo(); // name: Poly, room: 36
-// mango.sayHello();
-// poly.sayHello();
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// const Hero = function (name, xp) {
-//   this.name = name;
-//   this.xp = xp;
-// };
-
-// /*
-//  * Теперь у нас есть конструктор базового класса героя,
-//  * добавим в prototype какой-то метод.
-//  */
-// Hero.prototype.gainXp = function (amount) {
-//   console.log(`${this.name} gained ${amount} experience points`);
-//   this.xp += amount;
-// };
-
-// const mango = new Hero("Mango", 1000);
-// console.log(mango); // Hero { name: 'Mango', xp: 1000 }
-
-// // Так как mango это экземпляр Hero, то ему доступны методы из Hero.prototype
-// mango.gainXp(600); // Mango gained 500 experience points
-// console.log(mango); // Hero { name: 'Mango', xp: 1500 }
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
