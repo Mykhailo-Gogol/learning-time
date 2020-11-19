@@ -149,6 +149,9 @@ console.log(getUsersWithFriend(users, "Briana Decker"));
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 9
 //Получи массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 //Избегаем мутации исходного массива: т.к. метод sort изменяет (мутирует) исходный массив, то следует сделать копию массива и сортировать уже копию, а не исходный массив.
-const getNamesSortedByFriendsCount = (array) => [...array].sort( (a, b) => a.friends.length - b.friends.length).map( ({name}) => name);
+const getNamesSortedByFriendsCount = (array) =>
+  [...array]
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map(({ name }) => name);
 
-console.log(getNamesSortedByFriendsCount(users));//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 10
+console.log(getNamesSortedByFriendsCount(users)); //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 10
