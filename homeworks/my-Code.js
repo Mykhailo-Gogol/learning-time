@@ -125,3 +125,34 @@ const clients12 = [
   "experts",
 ].sort((a, b) => b.length - a.length);
 console.log("sort: ", clients12);
+
+// DOM
+const rootContainerRef = document.querySelector(".js-root");
+const containerRef = document.createElement("div");
+const listRef = document.createElement("ul");
+const cellRef = document.createElement("li");
+const cellRef2 = document.createElement("li");
+const cellRef3 = document.createElement("li");
+const linkRef = document.createElement("a");
+const linkRef2 = document.createElement("a");
+const linkRef3 = document.createElement("a");
+
+linkRef.textContent = "First link";
+linkRef2.textContent = "Second link";
+linkRef3.textContent = "Third link";
+
+linkRef.href = "#";
+linkRef2.href = "#";
+linkRef3.href = "#";
+
+cellRef.appendChild(linkRef);
+cellRef2.appendChild(linkRef2);
+cellRef3.appendChild(linkRef3);
+
+listRef.append(cellRef, cellRef2, cellRef3);
+
+containerRef.appendChild(listRef);
+
+rootContainerRef.appendChild(containerRef);
+
+cellRef3.remove();
