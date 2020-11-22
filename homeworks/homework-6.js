@@ -154,4 +154,27 @@ const getNamesSortedByFriendsCount = (array) =>
     .sort((a, b) => a.friends.length - b.friends.length)
     .map(({ name }) => name);
 
-console.log(getNamesSortedByFriendsCount(users)); //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 10
+console.log(getNamesSortedByFriendsCount(users));
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 10
+// Write code under this line
+const getSortedUniqueSkills = (array) =>
+  array
+    .reduce((acc, { skills }) => {
+      return acc.concat(skills);
+    }, [])
+    .sort()
+    .filter(function (item, pos, self) {
+      return self.indexOf(item) == pos;
+    });
+
+console.log(getSortedUniqueSkills(users));
+/* [ 'adipisicing', 'amet',
+ 'anim', 'commodo',
+ 'culpa', 'elit',
+ 'ex', 'ipsum',
+ 'irure', 'laborum',
+ 'lorem', 'mollit',
+ 'non', 'nostrud',
+ 'nulla', 'proident',
+ 'tempor', 'velit',
+ 'veniam' ]; */
