@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
+    publicPath: "/learning-time/",
   },
   devServer: {
     contentBase: path.join(__dirname, "build"),
