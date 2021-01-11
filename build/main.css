@@ -1,1 +1,1 @@
-html{box-sizing:border-box}body{background-color:tomato}h1{text-align:center}
+*{margin:0;padding:0;box-sizing:border-box}.wrapper{width:400px;display:flex;background-color:#000;justify-content:space-evenly;padding:100px 0;margin:auto}.no-style-list{list-style:none;color:rgba(255,255,255,.9)}.style-list--green{color:rgba(255,255,255,.8)}.style-list--red{color:rgba(255,255,255,.8)}

@@ -1,1 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.wrapper {
+  width: 400px;
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
+  padding: 100px 0;
+  margin: auto;
+}
+
+.no-style-list {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.style-list--green {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.style-list--red {
+  color: rgba(255, 255, 255, 0.8);
+}
