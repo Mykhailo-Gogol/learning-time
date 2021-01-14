@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "/learning-time/",
+    // publicPath: "/learning-time/",
   },
   devServer: {
     contentBase: path.join(__dirname, "build"),
@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.js$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
