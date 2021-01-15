@@ -1,80 +1,5 @@
 import "./css/style.css";
-
-// console.log("Helo World");
-
-// const add = (a, b) => a + b;
-// add(2, 3);
-
-// // promise
-
-// const promise = new Promise((resolve, reject) => {
-//   const success = Math.random() > 0.3;
-//   setTimeout(() => {
-//     if (success) {
-//       resolve("data");
-//     }
-//     reject("rejected");
-//   }, 500);
-// });
-
-// console.log("before");
-
-// promise
-//   .then((result) => console.log(`%c${result}`, "color: green"))
-//   .catch((error) => console.log(`%c${error}`, "color: red;"))
-//   .finally(() => console.log("finally"));
-
-// console.log("after");
-
-// // chaining
-// const promise2 = new Promise((resolve) => {
-//   resolve(5);
-// });
-
-// promise2
-//   .then((x) => {
-//     console.log("x: ", x);
-//     return x * 2;
-//   })
-//   .then((y) => {
-//     console.log("y: ", y);
-//     return y + y;
-//   })
-//   .then((z) => {
-//     console.log("z: ", z);
-//   });
-
-// fetch
-
-fetch("https://swapi.dev/api/people/1/")
-  .then((res) => res.json())
-  .then((json) => console.log(json.name));
-
-// typicode
-const url = "https://jsonplaceholder.typicode.com/users/1/todos";
-
-function fetchSomething(searchQuery) {
-  return fetch(searchQuery).then((response) => response.json());
-}
-
-function doSomething(data) {
-  console.log(data[0]);
-}
-
-fetchSomething(url).then(doSomething);
-
-// swapi2
-
-const url2 = "https://swapi.dev/api/planets/1/";
-function fetchSomething2(query) {
-  return fetch(query).then((response) => response.json());
-}
-
-function doSomething2(data) {
-  console.log(data);
-}
-
-fetchSomething2(url2).then(doSomething2);
+const axios = require("axios");
 
 // pb api
 const references = {
@@ -88,7 +13,6 @@ const favurl =
   "https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11";
 
 function renderHtml(data) {
-  console.log(data);
   const arrayOfBase = [];
   const arrayOfExchange = [];
   const arrayOfBuy = [];
@@ -108,17 +32,27 @@ function renderHtml(data) {
   references.saleRef.insertAdjacentHTML("beforeend", arrayOfSale.join(""));
 }
 
+// fetch
+console.time("answer time");
 function fetchData(query) {
   return fetch(query).then((response) => response.json());
 }
+fetchData(favurl).then((data) => renderHtml(data));
 
-function finalRendering(data) {
-  renderHtml(data);
+console.timeLog("answer time");
+
+// axios
+function getUser(url) {
+  axios
+    .get(url)
+    .then(({ data }) => {
+      renderHtml(data);
+      console.log("exchange rate:", data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
+getUser(favurl);
 
-fetchData(favurl).then(finalRendering);
-
-// eslint
-
-const hello = "hello";
-console.log(hello);
+console.timeEnd("answer time");
